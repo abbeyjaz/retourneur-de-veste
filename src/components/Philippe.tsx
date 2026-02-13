@@ -15,8 +15,8 @@ export default function Philippe({ progress, isComplete }: PhilippeProps) {
 
   // Opacity: very faint at start, more visible at end
   const opacity = 0.04 + t * t * 0.45 // quadratic curve: 0.04 → 0.49
-  // Scale: tiny at start, full height at end
-  const scale = 0.15 + t * 0.85 // 0.15 → 1.0
+  // Scale: tiny at start, capped so he stays visible
+  const scale = 0.15 + t * 0.68 // 0.15 → 0.83
 
   return (
     <div
