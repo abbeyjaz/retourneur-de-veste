@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Lucas from '@/components/Lucas'
 import Checklist from '@/components/Checklist'
 import Confetti from '@/components/Confetti'
+import Philippe from '@/components/Philippe'
 
 export default function Home() {
   const [checked, setChecked] = useState<boolean[]>(new Array(10).fill(false))
@@ -41,6 +42,7 @@ export default function Home() {
               style={{ width: `${progress * 100}%` }}
             />
             <Lucas progress={progress} isComplete={isComplete} />
+            <Philippe progress={progress} isComplete={isComplete} />
           </div>
           <div className="spectrum-counter">{count}/10</div>
         </div>
