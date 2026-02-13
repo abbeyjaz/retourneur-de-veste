@@ -26,6 +26,9 @@ export default function Home() {
       {/* Background gradient rouge → bleu */}
       <div className="bg-gradient" />
 
+      {/* Philippe fantôme à droite */}
+      <Philippe progress={progress} isComplete={isComplete} />
+
       {/* Title */}
       <h1 className="title">Lucas Sauquet Vest Returning Simulator 2027</h1>
 
@@ -42,7 +45,6 @@ export default function Home() {
               style={{ width: `${progress * 100}%` }}
             />
             <Lucas progress={progress} isComplete={isComplete} />
-            <Philippe progress={progress} isComplete={isComplete} />
           </div>
           <div className="spectrum-counter">{count}/10</div>
         </div>
