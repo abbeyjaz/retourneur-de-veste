@@ -295,17 +295,17 @@ body {
   right: 0;
   bottom: 0;
   z-index: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1.2s ease, transform 1.2s ease;
   pointer-events: none;
 }
 
 .philippe-img {
-  width: 300px;
-  height: auto;
+  width: auto;
+  height: 100vh;
   object-fit: contain;
   filter: grayscale(30%);
-  mask-image: linear-gradient(to top, transparent 0%, black 30%, black 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%, black 70%, transparent 100%);
+  mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%);
 }
 
 .philippe-speech {

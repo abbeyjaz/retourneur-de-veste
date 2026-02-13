@@ -8,25 +8,34 @@ interface PhilippeProps {
 }
 
 export default function Philippe({ progress, isComplete }: PhilippeProps) {
-  // Philippe appears progressively from 20% progress
-  const visibility = Math.max(0, (progress - 0.2) / 0.8)
+  // Philippe only appears from 5/10
+  const t = Math.max(0, (progress - 0.5) / 0.5) // 0 at 5/10, 1 at 10/10
 
-  if (visibility <= 0) return null
+  if (t <= 0) return null
+
+  // Opacity: very faint at start, more visible at end
+  const opacity = 0.04 + t * t * 0.45 // quadratic curve: 0.04 → 0.49
+  // Scale: tiny at start, full height at end
+  const scale = 0.15 + t * 0.85 // 0.15 → 1.0
 
   return (
     <div
       className="philippe-wrapper"
-      style={{ opacity: 0.15 + visibility * 0.35 }}
+      style={{
+        opacity,
+        transform: `scale(${scale})`,
+        transformOrigin: 'bottom right',
+      }}
     >
       <Image
         src="/philippe.webp"
         alt="Philippe"
-        width={400}
-        height={500}
+        width={500}
+        height={700}
         className="philippe-img"
       />
       {isComplete && (
-        <div className="philippe-speech">Mufasa est fier de toi, Simba.</div>
+        <div className="philippe-speech">Mufasa est fier de toi, fiston.</div>
       )}
     </div>
   )
