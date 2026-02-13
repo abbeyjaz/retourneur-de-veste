@@ -6,7 +6,7 @@ export const ITEMS = [
   "Dit que les charges sont trop élevées",
   'Dit "on peut plus rien dire"',
   "A commencé à suivre des comptes LinkedIn inspirants",
-  "Parle de mérite et de responsabilité individuelle",
+  "Je suis Pierre Ninet sur les réseaux sociaux et j'assume",
   "Est quand même un peu d'accord avec Sarah Knafo chez Matthieu Stef",
   "Trouve que le RSA c'est trop facile",
   "Place ses enfants dans le privé",

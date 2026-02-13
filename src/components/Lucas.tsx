@@ -35,7 +35,7 @@ export default function Lucas({ progress, isComplete }: LucasProps) {
         </div>
       </div>
 
-      {isComplete && <div className="lucas-speech">Je suis de droite.</div>}
+      {isComplete && <div className="lucas-speech">Je suis de gauche, mais je vote à droite.</div>}
     </div>
   )
 }
