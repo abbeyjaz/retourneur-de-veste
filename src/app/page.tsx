@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
-import Checklist from '@/components/Checklist'
+import { ITEMS, ChecklistColumn } from '@/components/Checklist'
 import ProgressBar from '@/components/ProgressBar'
 import Confetti from '@/components/Confetti'
 
@@ -34,10 +34,25 @@ export default function Home() {
       <h1 className="title">Lucas Sauquet — Le Retournement</h1>
 
       <div className="content">
-        <Checklist checked={checked} onToggle={handleToggle} />
+        <ChecklistColumn
+          items={ITEMS.slice(0, 5)}
+          checked={checked}
+          startIndex={0}
+          onToggle={handleToggle}
+          side="left"
+        />
+
         <div className="scene-container">
           <Scene progress={progress} isComplete={isComplete} />
         </div>
+
+        <ChecklistColumn
+          items={ITEMS.slice(5)}
+          checked={checked}
+          startIndex={5}
+          onToggle={handleToggle}
+          side="right"
+        />
       </div>
 
       <ProgressBar progress={progress} />
