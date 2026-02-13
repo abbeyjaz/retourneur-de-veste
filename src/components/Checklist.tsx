@@ -8,7 +8,7 @@ export const ITEMS = [
   "On paie trop d'impôts, je te le dis en tant qu'entrepreneur",
   "Je suis Pierre Ninet sur les réseaux sociaux et j'assume",
   "Est quand même un peu d'accord avec Sarah Knafo chez Matthieu Stef",
-  "La jurisprudence sur les congés maladie en congé payé est un scandale",
+  "C'est scandaleux de pouvoir poser un congé maladie pendant ses vacances",
   "Place ses enfants dans le privé",
   "Va remplacer ses salariés par de l'IA",
   "On est quand même mieux à l'Île de Ré",
