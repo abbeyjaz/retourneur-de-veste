@@ -6,7 +6,7 @@ export const ITEMS = [
   "Dit que les charges sont trop élevées",
   'Dit "on peut plus rien dire"',
   "On paie trop d'impôts, je te le dis en tant qu'entrepreneur",
-  "Je suis Pierre Ninet sur les réseaux sociaux et j'assume",
+  "Je suis Pierre Niney sur les réseaux sociaux et j'assume",
   "Est quand même un peu d'accord avec Sarah Knafo chez Matthieu Stef",
   "C'est scandaleux de pouvoir poser un congé maladie pendant ses vacances",
   "Place ses enfants dans le privé",
