@@ -32,8 +32,8 @@ export default function Home() {
       <div className="hero">
         <div className="spectrum">
           <div className="spectrum-labels">
-            <span className="label-left">GAUCHE</span>
-            <span className="label-right">DROITE</span>
+            <span className="label-left">☭ GAUCHE</span>
+            <span className="label-right">DROITE 🇫🇷</span>
           </div>
           <div className="spectrum-track">
             <div
