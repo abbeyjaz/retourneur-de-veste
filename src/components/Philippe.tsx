@@ -35,7 +35,7 @@ export default function Philippe({ progress, isComplete }: PhilippeProps) {
         className="philippe-img"
       />
       {isComplete && (
-        <div className="philippe-speech">Mufasa est fier de toi, fiston.</div>
+        <div className="philippe-speech">Mufasa est fier de toi Symba</div>
       )}
     </div>
   )
