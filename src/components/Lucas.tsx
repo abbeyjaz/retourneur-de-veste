@@ -16,7 +16,7 @@ export default function Lucas({ progress, isComplete }: LucasProps) {
       <div className={`lucas-body ${progress > 0 ? 'running' : 'idle'} ${isComplete ? 'celebrating' : ''}`}>
         {/* Photo de Lucas */}
         <div className="lucas-head">
-          <Image src="/lucas.jpg" alt="Lucas Sauquet" width={60} height={60} />
+          <Image src="/lucas.jpg" alt="Lucas Sauquet" width={130} height={130} />
         </div>
 
         {/* Petit corps */}
