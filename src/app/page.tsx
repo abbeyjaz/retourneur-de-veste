@@ -29,11 +29,10 @@ export default function Home() {
       {/* Philippe fantôme à droite */}
       <Philippe progress={progress} isComplete={isComplete} />
 
-      {/* Title */}
-      <h1 className="title">Lucas Sauquet Vest Returning Simulator 2027</h1>
-
-      {/* HERO: Spectrum zone avec Lucas */}
+      {/* HERO: Title + Spectrum zone avec Lucas */}
       <div className="hero">
+        <h1 className="title">Lucas Sauquet Vest Returning Simulator 2027</h1>
+
         <div className="spectrum">
           <div className="spectrum-labels">
             <span className="label-left">☭ GAUCHE</span>
@@ -50,7 +49,10 @@ export default function Home() {
         </div>
 
         {isComplete && (
-          <p className="complete-message">Le retournement est complet.</p>
+          <div className="complete-section">
+            <p className="complete-message">Le retournement est complet.</p>
+            <p className="complete-quote">&laquo; Je suis de gauche, mais je vote à droite. &raquo;</p>
+          </div>
         )}
       </div>
 

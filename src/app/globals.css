@@ -38,8 +38,6 @@ body {
 
 /* ---- TITLE ---- */
 .title {
-  position: relative;
-  z-index: 1;
   font-size: 1.8rem;
   font-weight: 800;
   text-align: center;
@@ -434,14 +432,21 @@ body {
 }
 
 /* ---- COMPLETE MESSAGE ---- */
+.complete-section {
+  text-align: center;
+}
+
 .complete-message {
   margin-top: 2rem;
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 800;
-  text-align: center;
   animation: fadeIn 0.8s ease-in;
   text-shadow: 0 0 40px rgba(21, 101, 192, 0.6);
+}
+
+.complete-quote {
+  display: none;
 }
 
 @keyframes fadeIn {
@@ -475,12 +480,22 @@ body {
   }
 
   .lucas-speech {
-    font-size: 0.65rem;
-    padding: 4px 10px;
-    top: -40px;
-    white-space: normal;
-    text-align: center;
-    max-width: 180px;
+    display: none;
+  }
+
+  .complete-quote {
+    display: block;
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  .complete-message {
+    margin-top: 0.75rem;
+    font-size: 1.1rem;
   }
 
   .lucas-head {
