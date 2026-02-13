@@ -1,12 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import dynamic from 'next/dynamic'
-import { ITEMS, ChecklistColumn } from '@/components/Checklist'
+import Lucas from '@/components/Lucas'
+import Checklist from '@/components/Checklist'
 import ProgressBar from '@/components/ProgressBar'
 import Confetti from '@/components/Confetti'
-
-const Scene = dynamic(() => import('@/components/Scene'), { ssr: false })
 
 export default function Home() {
   const [checked, setChecked] = useState<boolean[]>(new Array(10).fill(false))
@@ -23,38 +21,36 @@ export default function Home() {
     })
   }
 
-  const bgStyle = {
-    background: `linear-gradient(135deg,
-      rgb(${Math.round(40 - progress * 30)}, ${Math.round(10 + progress * 10)}, ${Math.round(10 + progress * 30)}) 0%,
-      rgb(${Math.round(20 - progress * 15)}, ${Math.round(15 + progress * 10)}, ${Math.round(25 + progress * 30)}) 100%)`,
-  }
-
   return (
-    <main className="page" style={bgStyle}>
-      <h1 className="title">Lucas Sauquet — Le Retournement</h1>
+    <main
+      className="page"
+      style={{
+        background: `linear-gradient(135deg,
+          hsl(${progress * 220}, ${40 + progress * 20}%, ${12 + progress * 3}%) 0%,
+          hsl(${progress * 220}, ${30 + progress * 20}%, ${8 + progress * 5}%) 100%)`,
+      }}
+    >
+      <h1 className="title">Le Retournement de Lucas</h1>
 
-      <div className="content">
-        <ChecklistColumn
-          items={ITEMS.slice(0, 5)}
-          checked={checked}
-          startIndex={0}
-          onToggle={handleToggle}
-          side="left"
-        />
-
-        <div className="scene-container">
-          <Scene progress={progress} isComplete={isComplete} />
+      {/* Zone du spectre politique */}
+      <div className="spectrum">
+        <div className="spectrum-labels">
+          <span className="label-left">GAUCHE</span>
+          <span className="label-right">DROITE</span>
         </div>
-
-        <ChecklistColumn
-          items={ITEMS.slice(5)}
-          checked={checked}
-          startIndex={5}
-          onToggle={handleToggle}
-          side="right"
-        />
+        <div className="spectrum-track">
+          <div
+            className="spectrum-fill"
+            style={{ width: `${progress * 100}%` }}
+          />
+          <Lucas progress={progress} isComplete={isComplete} />
+        </div>
       </div>
 
+      {/* Checklist */}
+      <Checklist checked={checked} onToggle={handleToggle} />
+
+      {/* Progress */}
       <ProgressBar progress={progress} />
 
       {isComplete && (
