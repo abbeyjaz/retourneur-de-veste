@@ -54,7 +54,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 0 3rem;
   min-height: 300px;
 }
@@ -62,6 +61,7 @@ body {
 .spectrum {
   width: 100%;
   max-width: 900px;
+  margin: auto 0;
 }
 
 .spectrum-labels {
