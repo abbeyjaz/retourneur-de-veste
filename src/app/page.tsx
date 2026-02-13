@@ -30,7 +30,7 @@ export default function Home() {
           hsl(${progress * 220}, ${30 + progress * 20}%, ${8 + progress * 5}%) 100%)`,
       }}
     >
-      <h1 className="title">Le Retournement de Lucas</h1>
+      <h1 className="title">Lucas Sauquet Vest Returning Simulator 2027</h1>
 
       {/* Zone du spectre politique */}
       <div className="spectrum">

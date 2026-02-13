@@ -9,7 +9,7 @@ const geistSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Le Retournement de Lucas",
+  title: "Lucas Sauquet Vest Returning Simulator 2027",
   description: "Lucas Sauquet retourne sa veste — un hommage interactif",
 };
 
